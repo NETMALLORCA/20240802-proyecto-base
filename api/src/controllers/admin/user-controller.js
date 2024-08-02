@@ -1,8 +1,3 @@
-// Dentro de la carpeta routes crearemos las rutas que devolverán a su vez las rutas establecidas en el punto anterior. Por ejemplo, 
-// si hemos creado en el punto 4 un entorno llamado front el archivo se llamara front-routes.js, si el entorno se llama company y dentro tiene 
-// auth-company y front-company entonces crearemos los archivos auth-company-routes.js y company-routes.js. Dentro de estos archivos escribiremos:
-
-
 const sequelizeDb = require('../../models')
 const User = sequelizeDb.User
 const Op = sequelizeDb.Sequelize.Op

@@ -1,14 +1,12 @@
-// Aquí le estamos diciendo que cuando se escriba "npm run dev" en la raíz del proyecto se use la librería npm-run-all que lanzará simultáneamente varios 
-// comandos, en concreto, dev:front y proxy. Si nos fijamos dev:front lo que hace es suponer que tenemos un entorno dentro de una carpeta llamada front, 
-// entrar en ella client/front y ejecutar "npm run dev". Por tanto, modificaremos esta ejecución dependiendo de los entornos que tengamos, por ejemplo:
-
 {
   "dependencies": {
     "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6"
   },
   "scripts": {
-    "dev": "npm-run-all --parallel dev:front proxy",
+    "dev": "npm-run-all --parallel dev:admin dev:auth-admin dev:front proxy",
+    "dev:admin": "cd client/admin/front-admin && npm run dev", 
+    "dev:auth-admin": "cd client/admin/auth-admin && npm run dev", 
     "dev:front": "cd client/front && npm run dev", 
     "proxy": "node ./proxy.js"
   },

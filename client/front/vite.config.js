@@ -1,9 +1,9 @@
 const { defineConfig } = require('vite')
 
 export default defineConfig({
-  base: '/admin/login',
+  base: '/',
   server: {
-    port: 5170
+    port: 5172
   },
   build: {
     outDir: 'dist',
